@@ -2,19 +2,20 @@ package com.qspider.springboot.BeachResortProject.entity;
 
 public class Booking {
 	private String id;
-	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
-	}
 	private String room_status;
 	private String payment_status;
 	
 //	private List<Rooms> rooms;
 //	
 //	private List<Services> services;
+	
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}	
 
 	public String getRoom_status() {
 		return room_status;
