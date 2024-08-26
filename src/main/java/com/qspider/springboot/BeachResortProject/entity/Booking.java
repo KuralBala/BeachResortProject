@@ -1,13 +1,23 @@
 package com.qspider.springboot.BeachResortProject.entity;
 
+import java.util.List;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class Booking {
+	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private String id;
 	private String room_status;
 	private String payment_status;
 	
 //	private List<Rooms> rooms;
 //	
-//	private List<Services> services;
+	private List<AdditionalServices> additional_services;
 	
 	public String getId() {
 		return id;
@@ -41,13 +51,14 @@ public class Booking {
 //		this.rooms = rooms;
 //	}
 //
-//	public List<Services> getServices() {
-//		return services;
-//	}
-//
-//	public void setServices(List<Services> services) {
-//		this.services = services;
-//	}
+
+	public List<AdditionalServices> getAdditional_services() {
+		return additional_services;
+	}
+
+	public void setAdditional_services(List<AdditionalServices> additional_services) {
+		this.additional_services = additional_services;
+	}
 
 	
 	
